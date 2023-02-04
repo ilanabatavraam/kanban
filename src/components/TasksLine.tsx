@@ -14,7 +14,6 @@ export function TasksLine({ data, title, color }: TaskLineProps) {
     }
 
     // const dataItems = [];
-    //
     // for (let i = 0; i <= data.length; i++) {
     //     dataItems.push(`
     //         <li key={data.id} className="rounded p-3 border cursor-pointer border-l-4 border-l-gray-200">
@@ -34,7 +33,7 @@ export function TasksLine({ data, title, color }: TaskLineProps) {
             <ul className="flex flex-col gap-2">
                 <li className="rounded p-3 border cursor-pointer border-l-4" style={{borderLeftColor: color}}>
                     <input
-                        value={value ? value : title}
+                        value={value ? value : data[0].name}
                         className="border-2 outline-0 border-transparent hover:border-2 hover:border-gray-400 hover:border-dashed"
                         onInput={changeHandler}
                     />
