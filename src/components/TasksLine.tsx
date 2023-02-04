@@ -1,5 +1,4 @@
 import React from "react";
-import {taskNamesLine} from "../data/taskLines";
 
 interface TaskLineProps {
     data: any;
@@ -39,6 +38,12 @@ export function TasksLine({ data, title, color }: TaskLineProps) {
                     />
                 </li>
             </ul>
+
+            {title === 'Bin' && <button
+                className="uppercase w-100 p-3 pr-3 rounded hover:opacity-75"
+                style={{backgroundColor: color}}
+                type="button"
+            >Clear</button>}
         </div>
     )
 }
